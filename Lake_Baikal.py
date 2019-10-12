@@ -1,4 +1,4 @@
-Baikal_volume = 23620
+Baikal_volume_km3 = 23620
 Days_year = 365
 L_KM3 = 0.00000000001
 KM3_M3 = 1000000000
@@ -16,7 +16,7 @@ population = float(input())
 
 water_cons_km3_day = water_consumption_l * L_KM3
 cons_total = water_cons_km3_day * population
-cons_years = Baikal_volume / cons_total / Days_year
+cons_years = Baikal_volume_km3 / cons_total / Days_year
 
 print('Воды Байкала хватит на', format(cons_years // 1, '.0f'), 'лет.')
 
@@ -28,7 +28,7 @@ tarif = input()
 tarif1 = tarif.split(' ')
 sum_tarif = float(tarif1[0]) + float(tarif1[1])
 
-Baikal_volume_m3 = Baikal_volume * KM3_M3
+Baikal_volume_m3 = Baikal_volume_km3 * KM3_M3
 
 revenue = Baikal_volume_m3 * sum_tarif
 
